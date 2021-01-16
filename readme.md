@@ -84,7 +84,7 @@ Note: you can also directly navigate the app from the browser
 
 ### Step 4: Additional configurations
 
-**Configuring trace and log correlation**
+**Configuring trace and log connection**
 
 Logging with lograge, and trace_id injection have already been configured in `blog/config/initializers/lograge.rb`
 
