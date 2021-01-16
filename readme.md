@@ -80,7 +80,7 @@ query {
 }
 ```
 
-You can also directly navigate the app from the browser
+Note: you can also directly navigate the app from the browser
 
 ### Step 4: Additional configurations
 
@@ -195,6 +195,8 @@ exit
 vagrant destroy
 ```
 
+Note: if you have made changes to the data folder, but would like to return back to the inital setup run `git fetch --all` and `git reset --hard origin/master
+`
 ### Resources
 1. Rails: https://guides.rubyonrails.org/getting_started.html
 2. Lograge: https://docs.datadoghq.com/logs/log_collection/ruby/
