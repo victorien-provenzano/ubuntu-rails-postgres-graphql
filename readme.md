@@ -161,7 +161,7 @@ rbenv local <VERSION>
 rbenv rehash
 ```
 
-Once you have done this, running `ruby -v` should return the new version you have installed!
+Note: once you have done this, running `ruby -v` should return the new version you have installed!
 
 - Step 5: Change the version of ruby in your Gemfile
 ```
