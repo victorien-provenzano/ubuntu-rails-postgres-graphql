@@ -56,17 +56,17 @@ To make requests, `curl "localhost:3000"` in a different terminal or go to your 
 
 ***Automatic instrumentation spans:***
 
-- localhost:3000
-- localhost:3000/articles/new
-- localhost:3000/articles/#{id}/edit
+- `localhost:3000`
+- `localhost:3000/articles/new`
+- `localhost:3000/articles/#{id}/edit`
 
 ***Custom instrumentation spans:***
 
-- localhost:3000/articles/#{id}
+- `localhost:3000/articles/#{id}`
 
 ***Graphql Endpoint:***
 
-- localhost:3000/graphiql
+- `localhost:3000/graphiql`
 
 - write the following query and press play:
 
