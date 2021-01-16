@@ -1,6 +1,6 @@
 source /home/vagrant/.sandbox.conf.sh
 
-echo "Installing Datadog Agent 6 from api_key: ${DD_API_KEY} but not starting it..."
+echo "Installing Datadog Agent 7 from api_key: ${DD_API_KEY} but not starting it..."
 DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=${DD_API_KEY} DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
 
 
