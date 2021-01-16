@@ -94,7 +94,7 @@ In order to send these logs to the plateform, you need to:
 ```
 logs_enabled: true
 ```
-- Add a ruby.d/conf.yaml file in conf.d with the following configuration:
+- Add a ruby.d/conf.yaml file in the conf.d/ folder with the following configuration:
 ```
 logs:
   - type: file
