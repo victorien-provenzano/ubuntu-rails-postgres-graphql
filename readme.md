@@ -131,10 +131,9 @@ In order to replicate an issue, you may need to change the ruby version being us
 
 This sandbox was made with rbenv, which is a package manager that makes it easy to change the ruby version.
 
-Step 1: Figure out which version you would like to use
+<ins>Step 1: Figure out which version you would like to use<ins>
 
 ```
-
 # list latest stable versions:
 $ rbenv install -l
 
@@ -142,21 +141,21 @@ $ rbenv install -l
 $ rbenv install -L
 ```
 
-Step 2: Install a ruby version
+<ins>Step 2: Install a ruby version<ins>
 
 ```
 # install a Ruby version:
 $ rbenv install <VERSION>
 ```
 
-Step 3: Set this ruby version in your project directory
+<ins>Step 3: Set this ruby version in your project directory<ins>
 
 ```
 cd data/blog
 rbenv local <VERSION>
 ```
 
-Step 4: Install shims for all Ruby executables
+<ins>Step 4: Install shims for all Ruby executables<ins>
 
 ```
 $ rbenv rehash
@@ -164,17 +163,17 @@ $ rbenv rehash
 
 Once you have done this, running `ruby -v` should return the new version you have installed!
 
-Step 5: Change the version of ruby in your Gemfile
+<ins>Step 5: Change the version of ruby in your Gemfile<ins>
 ```
 ruby '<VERSION>'
 ```
 
-Step 6: Install bundler with your new version of ruby
+<ins>Step 6: Install bundler with your new version of ruby<ins>
 ```
 gem install bundler
 ```
 
-Step 7: Run bundle install & yarn install
+<ins>Step 7: Run bundle install & yarn install<ins>
 ```
 bundle install
 yarn install
