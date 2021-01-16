@@ -125,11 +125,71 @@ and run:
 
 - Versioning has already been configured in `blog/config/initializers/datadog.rb`
 
-### Step 5: Spinning down the application
+### Step 5: Changing the ruby version
+
+In order to replicate an issue, you may need to change the ruby version being used in this sandbox
+
+This sandbox was made with rbenv, which is a package manager that makes it easy to change the ruby version.
+
+Step 1: Figure out which version you would like to use
+
+```
+
+# list latest stable versions:
+$ rbenv install -l
+
+# list all local versions:
+$ rbenv install -L
+```
+
+Step 2: Install a ruby version
+
+```
+# install a Ruby version:
+$ rbenv install <VERSION>
+```
+
+Step 3: Set this ruby version in your project directory
+
+```
+cd data/blog
+rbenv local <VERSION>
+```
+
+Step 4: Install shims for all Ruby executables
+
+```
+$ rbenv rehash
+```
+
+Once you have done this, running `ruby -v` should return the new version you have installed!
+
+Step 5: Change the version of ruby in your Gemfile
+```
+ruby '<VERSION>'
+```
+
+Step 6: Install bundler with your new version of ruby
+```
+gem install bundler
+```
+
+Step 7: Run bundle install & yarn install
+```
+bundle install
+yarn install
+```
+
+And that's it! Now, when you run `rails s -b 0.0.0.0` you should see your new ruby version:
+```
+* Puma version: 5.1.1 (ruby <VERSION>) ("At Your Service")
+```
+
+### Step 6: Spinning down the application
 
 The application can be stopped with `Control + C`.
 
-### Step 6: To destroy the vagrant box
+### Step 7: To destroy the vagrant box
 
 ```
 exit
@@ -142,3 +202,4 @@ vagrant destroy
 3. Postgres: https://www.postgresql.org/docs/
 4. Graphql: https://graphql.org/
 5. dd-trace-rb: https://github.com/DataDog/dd-trace-rb
+6. rbenv: https://github.com/rbenv/rbenv
