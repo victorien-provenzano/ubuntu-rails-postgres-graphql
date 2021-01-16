@@ -135,17 +135,17 @@ Note: ruby was installed with rbenv, which is a package manager that makes it ea
 
 ```
 # list latest stable versions:
-$ rbenv install -l
+rbenv install -l
 
 # list all local versions:
-$ rbenv install -L
+rbenv install -L
 ```
 
 - Step 2: Install a ruby version
 
 ```
 # install a Ruby version:
-$ rbenv install <VERSION>
+rbenv install <VERSION>
 ```
 
 - Step 3: Set this ruby version in your project directory
@@ -158,7 +158,7 @@ rbenv local <VERSION>
 - Step 4: Install shims for all Ruby executables
 
 ```
-$ rbenv rehash
+rbenv rehash
 ```
 
 Once you have done this, running `ruby -v` should return the new version you have installed!
