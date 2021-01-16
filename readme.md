@@ -2,7 +2,7 @@
 
 ![Sample trace](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/7KubKjzw/9bd50652-e0c2-4f3c-b10a-d8e3c168eeee.png?v=624e198fc4e4d5f372c56f31dfda0a49)
 
-**Versions**
+**Versions:**
 - Ruby 3.0.0
 - Rails 6.1.1
 - Node 12.20.1
@@ -27,7 +27,7 @@ vagrant ssh
 
 ### Step 3: Spinning up the Rails App
 
-The tracer initialization code is in `blog/config/initializers/datadog.rb` and `blog/app/graphql/blog_schema.rb` (for graphql integration)
+The tracer initialization code is in `blog/config/initializers/datadog.rb` and `blog/app/graphql/blog_schema.rb` (for the graphql integration)
 
 ```
 cd /home/vagrant/data/blog
@@ -52,7 +52,7 @@ Use Ctrl-C to stop
 
 **Making requests**
 
-To make requests, `curl "localhost:3000"` in a different terminal or go to your browser at localhost:3000.
+To make requests, `curl "localhost:3000"` in a different terminal or go to your browser at `localhost:3000`.
 
 ***Automatic instrumentation spans:***
 
