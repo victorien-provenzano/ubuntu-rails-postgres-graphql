@@ -6,7 +6,7 @@
 - Ruby 3.0.0
 - Rails 6.1.1
 - Node 12.20.1
-- graphql 1.11.6
+- Graphql 1.11.6
 
 This spins up an Rails 6.1.1 app with the basic CRUD operators using postgres and a graphql endpoint
 
