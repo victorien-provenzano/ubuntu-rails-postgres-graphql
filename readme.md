@@ -84,7 +84,7 @@ Note: you can also directly navigate the app from the browser
 
 ### Step 4: Additional configurations
 
-**Configuring trace and log connection**
+**Configure trace and log connection**
 
 Logging with lograge, and trace_id injection have already been configured in `blog/config/initializers/lograge.rb`
 
@@ -107,7 +107,7 @@ and run:
 
 `sudo service datadog-agent restart`
 
-**Configuring infrastructure metrics**
+**Configure infrastructure metrics**
 
 - Infrastructure metrics on the tracer side have already been configured in `blog/config/initializers/datadog.rb`
 
@@ -121,7 +121,7 @@ and run:
 
 `sudo service datadog-agent restart`
 
-**Configuring versioning**
+**Configure versioning**
 
 - Versioning has already been configured in `blog/config/initializers/datadog.rb`
 
@@ -195,7 +195,7 @@ exit
 vagrant destroy
 ```
 
-Note: if you have made changes to the data folder, but would like to return back to the inital setup run `git fetch --all` and `git reset --hard origin/master
+Note: if you have made changes to the data folder, but would like to return back to the inital state run `git fetch --all` and `git reset --hard origin/master
 `
 ### Resources
 1. Rails: https://guides.rubyonrails.org/getting_started.html
