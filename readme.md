@@ -86,15 +86,15 @@ Note: you can also directly navigate the app from the browser
 
 **Configure trace and log connection**
 
-Tracer side: Logging with lograge, and trace_id injection have been configured in `blog/config/initializers/lograge.rb`
+- Tracer side: Logging with lograge, and trace_id injection have been configured in `blog/config/initializers/lograge.rb`
 
-Agent side: Logging has been configured in `datadog.yaml` and `conf.d/ruby.d/conf.yaml`
+- Agent side: Logging has been configured in `datadog.yaml` and `conf.d/ruby.d/conf.yaml`
 
 **Configure infrastructure metrics**
 
-Tracer side: Infrastructure metrics have been configured in `blog/config/initializers/datadog.rb`
+- Tracer side: Infrastructure metrics have been configured in `blog/config/initializers/datadog.rb`
 
-Agent side: Infrastructure metrics have been configured in `datadog.yaml`
+- Agent side: Infrastructure metrics have been configured in `datadog.yaml`
 
 **Configure versioning**
 
