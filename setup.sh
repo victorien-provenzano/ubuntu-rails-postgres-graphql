@@ -3,6 +3,25 @@ source /home/vagrant/.sandbox.conf.sh
 echo "Installing Datadog Agent 7 from api_key: ${DD_API_KEY} but not starting it..."
 DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=${DD_API_KEY} DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
 
+echo "Enable log collection"
+echo 'logs_enabled: true'| sudo tee -a /etc/datadog-agent/datadog.yaml
+
+echo "add env and tags"
+echo 'env: test
+tags:
+  - service:blog'| sudo tee -a /etc/datadog-agent/datadog.yaml
+
+
+echo "Track application log files"
+sudo mkdir /etc/datadog-agent/conf.d/ruby.d
+
+echo 'logs:
+  - type: file 
+    path: "home/vagrant/data/blog/log/app.log"
+    service: ruby
+    source: ruby '| sudo tee -a /etc/datadog-agent/conf.d/ruby.d/conf.yaml
+
+sudo service datadog-agent restart
 
 echo "Installing the rbenv and Ruby dependencies"
 sudo apt-get -y update
