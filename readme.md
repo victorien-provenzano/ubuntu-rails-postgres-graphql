@@ -86,44 +86,19 @@ Note: you can also directly navigate the app from the browser
 
 **Configure trace and log connection**
 
-Logging with lograge, and trace_id injection have already been configured in `blog/config/initializers/lograge.rb`
+Tracer side: Logging with lograge, and trace_id injection have been configured in `blog/config/initializers/lograge.rb`
 
-In order to send these logs to the plateform, you need to:
-
-- Enable logs in datadog.yaml
-```
-logs_enabled: true
-```
-- Add a ruby.d/conf.yaml file in the conf.d/ folder with the following configuration:
-```
-logs:
-  - type: file
-    path: "home/vagrant/data/blog/log/app.log"
-    service: ruby
-    source: ruby
-    sourcecategory: sourcecode
-```
-and run: 
-
-`sudo service datadog-agent restart`
+Agent side: Logging has been configured in `datadog.yaml` and `conf.d/ruby.d/conf.yaml`
 
 **Configure infrastructure metrics**
 
-- Infrastructure metrics on the tracer side have already been configured in `blog/config/initializers/datadog.rb`
+Tracer side: Infrastructure metrics have been configured in `blog/config/initializers/datadog.rb`
 
-- To complete the configuration, add the following to your datadog.yaml file:
-```
-env: test
-tags:
-  - service:blog
-```
-and run: 
-
-`sudo service datadog-agent restart`
+Agent side: Infrastructure metrics have been configured in `datadog.yaml`
 
 **Configure versioning**
 
-- Versioning has already been configured in `blog/config/initializers/datadog.rb`
+- Versioning has been configured in `blog/config/initializers/datadog.rb`
 
 ### Step 5: Changing the ruby version
 
