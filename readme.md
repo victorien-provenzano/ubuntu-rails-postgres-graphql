@@ -104,7 +104,7 @@ Note: you can also directly navigate the app from the browser
 
 In order to replicate an issue, you may need to change the ruby version being used in this sandbox
 
-Note: ruby was installed with rbenv, which is a package manager that makes it easy to change the ruby version
+Note: ruby was installed with rbenv, a version management tool that makes it easy to change the ruby version
 
 - Step 1: Figure out which version you would like to use
 
