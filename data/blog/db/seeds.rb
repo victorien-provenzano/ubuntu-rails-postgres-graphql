@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Article.destroy_all
 Article.new(title: "Hello Rails", body: "I am on Rails!").save
-Article.new(title: "Hello World", body: "I am on the world!").save
+Article.new(title: "Hello World", body: "Hello World!").save
 Article.new(title: "Hello Solutions Engineers", body: "Welcome to this sandbox!").save
